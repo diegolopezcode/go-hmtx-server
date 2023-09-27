@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HTMX Counter Example</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      body {
+        font-family: sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+      }
+
+      #container {
+        text-align: center;
+      }
+
+      .button-container {
+        margin-top: 1rem;
+        display: flex;
+        justify-content: center;
+      }
+
+      .button-container button {
+        margin-right: 0.5rem;
+      }
+    </style>
+    <script
+      src="https://unpkg.com/htmx.org@1.9.4"
+      integrity="sha384-zUfuhFKKZCbHTY6aRR46gxiqszMk5tcHjsVFxnUo8VMus4kHGVdIYVbOYYNlKmHV"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <div id="container">
+      <h1 class="text-3xl font-bold">HTMX Counter Example</h1>
+      <div id="counter">{{.CounterValue}}</div>
+      <div class="button-container">
+        <button
+          hx-target="#counter"
+          hx-post="/api/v1/decrement"
+          class="bg-red-700 hover:bg-red-800 rounded-lg py-2.5 px-4 text-white"
+        >
+          Decrease -
+        </button>
+        <button
+          hx-target="#counter"
+          hx-post="/api/v1/increment"
+          class="bg-green-700 hover:bg-green-800 rounded-lg py-2.5 px-4 text-white"
+        >
+          Increase +
+        </button>
+      </div>
+    </div>
+  </body>
+</html>

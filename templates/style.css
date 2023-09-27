@@ -1,0 +1,13 @@
+body {
+    font-family: sans-serif;
+  }
+  
+  #counter {
+    margin-top: 1rem;
+    text-align: center;
+  }
+  
+  .button {
+    margin-top: 1rem;
+  }
+  
