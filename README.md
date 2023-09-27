@@ -23,7 +23,7 @@ Asegúrate de tener Go instalado en tu sistema. Puedes descargar Go desde [golan
     ```bash
     go run main.go
     ```
-4. Abre tu navegador web y navega a [http://localhost:8080](http://localhost:8080).
+4. Abre tu navegador web y navega a [http://localhost:8080/api/v1/](http://localhost:8080/api/v1/).
 
 ## Cómo Funciona la Aplicación
 La aplicación es un contador web simple que muestra un número y ofrece botones para incrementar y decrementar el contador. Utiliza HTMX para actualizar el valor del contador en tiempo real sin necesidad de recargar la página completa.
